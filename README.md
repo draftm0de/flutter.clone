@@ -15,3 +15,16 @@ As we keep building, this README will expand into a living reference that captur
 - [x] Require status checks to pass before merging
   - Below you find an input box, type `test / test`
 - Click **Save**
+### .git/hook/pre-commit
+```
+#!/bin/sh
+
+printf '\nRunning dart format --output=write .\n'
+if ! dart format --output=write .; then
+  echo 'dart format failed; aborting commit.'
+  exit 1
+fi
+```
+```bash
+chmod +x .git/hook/pre-commit
+```

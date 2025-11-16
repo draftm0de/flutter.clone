@@ -13,7 +13,6 @@ As we keep building, this README will expand into a living reference that captur
 - Set **Branch name patter** to `main`
 - [x] Require a pull request before merging
 - [x] Require status checks to pass before merging
-  - Below you find an input box, type `test / test`
 - Click **Save**
 ### .git/hook/pre-commit
 ```
